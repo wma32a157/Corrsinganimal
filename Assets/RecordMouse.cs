@@ -41,8 +41,8 @@ public class RecordMouse : MonoBehaviour
 
 
         layerTest1 = checkLayerMask;
-        layerTest2 = 1 << checkLayerMask;
-        layerTest3 = LayerMask.NameToLayer("UI");
+        layerTest2 = LayerMask.NameToLayer("Ground");
+        layerTest3 = 1 << layerTest2;
 
         RaycastHit hitData;
         if (Physics.Raycast(ray, out hitData, 1000, checkLayerMask))
